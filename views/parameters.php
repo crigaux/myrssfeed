@@ -1,25 +1,11 @@
 <?php
+    require_once(__DIR__ . '/../helpers/functions.php');
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $displayMode = (string) filter_input(INPUT_POST, 'displayMode', FILTER_SANITIZE_NUMBER_INT);
-        $nbPages = (string) filter_input(INPUT_POST, 'nbPages', FILTER_SANITIZE_NUMBER_INT);
-        $subjects = filter_input(INPUT_POST, 'subjects', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY) ?? [];
+        
+        testDisplayMode();
+        testNbPages();
+        testSubjects();
 
-        if()
-        setcookie(
-            'displayMode',
-            $displayMode,
-            0
-        );
-        setcookie(
-            'nbPages',
-            $nbPages,
-            0
-        );
-        setcookie(
-            'subjects',
-            serialize($subjects),
-            0
-        );
     }
     var_dump($_COOKIE['displayMode']);
     var_dump($_COOKIE['nbPages']);
@@ -27,6 +13,7 @@
 ?>
 
 <form action="" method="POST">
+
     <legend>Mode d'affichage</legend>
     <div class="darkMode">
         <label for="">Light</label>
@@ -34,6 +21,7 @@
         <input type="radio" name="displayMode" id="" value="1">
         <label for="">Dark</label>
     </div>
+
     <legend>Nombre de pages à afficher</legend>
     <div class="nbPages">
         <input type="radio" name="nbPages" id="" value="0">
@@ -43,6 +31,7 @@
         <input type="radio" name="nbPages" id="" value="2">
         <label for="">12 pages</label>
     </div>
+    
     <legend>Choisissez trois thèmes favoris</legend>
     <div class="subjectsChoice">
         <div>
