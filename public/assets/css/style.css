@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #f3f3f3;
+}
+
 main {
     font-family: 'Vollkorn';
     background-color: #f3f3f3;
@@ -121,10 +125,113 @@ form .nbPages input {
     margin-left: 1rem;
 }
 
+.error {
+    color: red;
+}
 
 /* Mise en page de l'accueil */
+
+h2 {
+    margin: 1rem 0 0.5rem 0;
+    text-transform: uppercase;
+    font-family: 'UnicaOne';
+    text-align: center;
+}
+
+hr {
+    width: 86%;
+    margin-left: 5%;
+    margin-bottom: 1rem;
+    border: none;
+    border-top: 1px solid #B4AEAE;
+}
 
 .container {
     width: 90%;
     margin-left: 5%;
+    /* display: flex; */
+}
+
+.category {
+    display: flex;
+    overflow: scroll;
+    margin-left: 5%;
+}
+
+.card {
+    font-family: 'Vollkorn';
+    margin: 1rem 1rem;
+    height: 360px;
+    width: 250px;
+    box-shadow:0px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+    object-fit: cover;
+    height: 150px;
+    width: 250px;
+}
+
+.card .title {
+    font-family: 'Vollkorn';
+    font-size: 0.8rem;
+    width: 90%;
+    margin: 1rem 0 0.5rem 5%;
+    height: 18%;
+}
+
+.card .title a {
+    text-decoration: none;
+    color: black;
+}
+
+.card .title a:hover {
+    color: #E6725A;
+}
+
+.card .description {
+    font-style: italic;
+    font-family: 'Vollkorn';
+    margin: 1rem 5% 0.5rem 5%;
+    width: 90%;
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+.date {
+    font-size: 0.8rem;
+    color: #616060;
+    text-align:right;
+    margin-right: 5%;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        display: flex;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .container > div {
+        width: 30%;
+    }
+
+    .category {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        overflow: auto;
+        margin-left: 0;
+    }
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    hr {
+        display: none;
+    }
 }
