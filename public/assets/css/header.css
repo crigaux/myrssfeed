@@ -36,7 +36,7 @@
 }
 .separateLine {
     display: flex;
-    width: 90%;
+    width: 90vw;
     left: 10%;
     border-bottom: 2px solid #b4aeae;
     margin-top: 1%;
@@ -75,6 +75,17 @@
     
 }
 
+.navbar-links li a {
+    text-decoration: none;
+    color: #333;
+    padding: 1rem;
+    display: block;
+}
+.navbar-links a {
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
 .footer {
     width: 100%;
     height: 5%;
@@ -89,16 +100,6 @@
 .footer a{
     color:orange;
     text-decoration: none;
-}
-.navbar-links li a {
-    text-decoration: none;
-    color: #333;
-    padding: 1rem;
-    display: block;
-}
-.navbar-links a {
-    -webkit-transition: color 1s;
-    transition: color 1s;
 }
 
 
@@ -132,6 +133,9 @@
 }
 
 @media (max-width: 600px){
+    .titleHeader{
+        font-size: 40px;
+    }
     .toggle-button {
         display: flex;
     }
