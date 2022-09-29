@@ -1,4 +1,4 @@
-let darkMode = document.querySelector('.darkMode');
+let darkMode = document.querySelector('.darkModeToggle');
 let body = document.querySelector('body')
 
 if(document.cookie.split('; ').includes('displayMode=1') || document.cookie.split('; ').includes(' displayMode=1')) {

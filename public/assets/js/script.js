@@ -19,3 +19,13 @@ toggleButton.addEventListener('click', () => {
         footerPage.style.display = 'none';
     }
 })
+
+// ############################################################
+//               Redirection vers les paramètres
+// ############################################################
+
+// document.querySelectorAll('.iconSettings').forEach(element => {
+//     element.addEventListener('click', () => {
+//         location.href = 'http://myrssfeed.localhost/parameters'
+//     })
+// })

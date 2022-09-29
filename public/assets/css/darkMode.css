@@ -1,3 +1,9 @@
+.darkModeToggle {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+}
+
 .dark,
 .dark main {
     background-color: #444;
