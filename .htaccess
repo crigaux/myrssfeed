@@ -1,4 +1,3 @@
-Options +FollowSymlinks
 RewriteEngine On
 
 ErrorDocument 404 http://myrssfeed.localhost/404
@@ -11,5 +10,3 @@ RewriteRule ^en-continu$ controllers/pagesController.php
 RewriteRule ^galerie$ controllers/pagesController.php
 RewriteRule ^populaires$ controllers/pagesController.php
 RewriteRule ^les\+vus$ controllers/pagesController.php
-
-RewriteRule ^inconnu.html$  /test/test.html [L]

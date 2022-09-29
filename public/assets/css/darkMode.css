@@ -52,3 +52,12 @@
     background-color: #d3d3d3;
     color: #E6725A;
 }
+
+.dark .parametersForm {
+    background-color: #d3d3d3
+}
+
+.dark .parametersForm,
+.dark .parametersForm h1 {
+    color: #333;
+}

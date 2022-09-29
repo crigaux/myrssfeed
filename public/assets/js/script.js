@@ -24,8 +24,8 @@ toggleButton.addEventListener('click', () => {
 //               Redirection vers les paramètres
 // ############################################################
 
-// document.querySelectorAll('.iconSettings').forEach(element => {
-//     element.addEventListener('click', () => {
-//         location.href = 'http://myrssfeed.localhost/parameters'
-//     })
-// })
+document.querySelectorAll('.iconSettings').forEach(element => {
+    element.addEventListener('click', () => {
+        document.location.href = 'http://myrssfeed.localhost/parameters'
+    })
+})

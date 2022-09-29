@@ -395,3 +395,74 @@ button {
 /* ##################### 404 ##################### */
 /* ############################################### */
 
+#PNF {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+/* Font-Sizes */
+
+    /* mobile */
+    #PNF h1{
+        font-size: 40px;
+        font-family: 'UnicaOne';
+    }
+    #PNF h2{
+        font-size: 20px;
+        font-family: 'Vollkorn';
+    }   
+
+    .PNFbtn {
+        font-family: "Vollkorne";
+        padding: 0.6rem 2rem;
+        border-radius: 50px;
+        margin-top: 3rem;
+        color: #e6725a;
+        border: #e6725a 2px solid;
+        text-transform: uppercase;
+        font-size: 0.6rem;
+        background-color: #f3f3f3;
+        text-decoration: none;
+    }
+    
+    .PNFbtn:hover {
+        background-color: #e6725a;
+        color: #f3f3f3;
+    }
+
+    .PNF .separateLine {
+        width: 90%;
+        margin: 2rem 0;
+        margin-left: 5%;
+        display: block;
+    }
+    /* desktop */
+    @media (min-width: 900px ) {
+        #PNF h1{
+            font-size: 70px;
+        }
+        #PNF h2{
+            font-size: 1.5rem;
+        }
+        .PNFbtn {
+            font-size: 1.2rem;
+        }
+        .PNF .separateLine {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    /* tablet  */
+    @media (min-width: 500px ) and (max-width: 900px) {
+        #PNF h1{
+            font-size: 60px;
+        } 
+        #PNF h2{
+            font-size: 25px;
+        }
+    }
+
+
