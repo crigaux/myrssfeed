@@ -162,7 +162,14 @@ footer .legal a {
     border-bottom: 2px solid #dedede;
 }
 
+.iconsNavbar {
+    display: none;
+}
+
 @media (max-width: 600px){
+    .header {
+        height: 10vh;
+    }
     .titleHeader{
         font-size: 40px;
         width: 100%;
@@ -185,16 +192,19 @@ footer .legal a {
         flex-direction: column;
         justify-content: space-around;;
     }
-    .navbar-links li {
-        text-align: center;
+    .navbar-links form button  {
+        font-family: 'UnicaOne';
         text-transform: uppercase;
         font-size: 30px;
     }
-    .navbar-links li a {
+    .navbar-links a {
         font-family: 'UnicaOne';
+        text-transform: uppercase;
+        font-size: 30px;
     }
     .navbar-links.active {
         display: flex;
+        flex-direction: column;
         height: 90vh;
     }
     .brand-title{
@@ -218,5 +228,11 @@ footer .legal a {
     }
     .separateLine {
         display: none;
+    }
+    .iconsHeader {
+        display: none;
+    }
+    .iconsNavbar {
+        display: block;
     }
 }
