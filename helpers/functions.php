@@ -1,8 +1,7 @@
 <?php
     // Nettoie et test si la valeur renvoyé par l'input 'displayMode' vaut 0 ou 1
-    function testDisplayMode($errors) {
-        $displayMode = (string) filter_input(INPUT_POST, 'displayMode', FILTER_SANITIZE_NUMBER_INT);
-        if(empty($nbPages)) {
+    function testDisplayMode($errors, $displayMode) {
+        if($displayMode == '') {
             $errors['displayModeError'] = 'Champ obligatoire';
         } else if($displayMode < 0 || $displayMode > 1) {
             $errors['displayModeError'] = 'Valeur Incorrecte';
@@ -11,40 +10,41 @@
             setcookie(
                 'displayMode',
                 $displayMode,
-                0
+                time() + 60
             );
         }
+        return $errors;
     }
 
     // Nettoie et test si la valeur renvoyé par l'input 'nbPages' vaut 0, 1 ou 2
-    function testNbPages($errors) {
-        $nbPages = (string) filter_input(INPUT_POST, 'nbPages', FILTER_SANITIZE_NUMBER_INT);
-        if(empty($nbPages)) {
+    function testNbPages($errors, $nbPages) {
+        
+        if($nbPages == '') {
             $errors['nbPagesError'] = 'Champ obligatoire';
-        } else if($nbPages < 0 || $nbPages > 2) {
+        } else if($nbPages != 6 && $nbPages != 9 && $nbPages != 12) {
             $errors['nbPagesError'] = 'Valeur Incorrecte';
         } else {
             // Si il n'y a pas d'erreur, stocke la valeur dans un cookie
             setcookie(
                 'nbPages',
                 $nbPages,
-                0
+                time() + 60
             );
         }
+        return $errors;
     }
 
     // Nettoie et test si la valeur renvoyé par l'input 'displayMode' vaut 0, 1, 2 ou 3
     // et si le tableau ne contient pas plus de 3 entrées
-    function testSubjects($errors) {
-        $subjects = filter_input(INPUT_POST, 'subjects', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY) ?? [];
-        if(empty($nbPages)) {
-            $errors['subjectsError'] = 'Champ obligatoire';
+    function testSubjects($errors, $subjects) {
+        if(empty($subjects)) {
+            $errors['subjectsError'] .= 'Champ obligatoire';
         } else {
             foreach ($subjects as $key => $subject) {
                 if($subject < 0 || $subject > 4) {
                     $errors['subjectsError'] = 'Valeur incorrecte';
-                } else if (count($subjects) > 3) {
-                    $errors['subjectsError'] = 'Veuillez ne choisir que 3 champs';
+                } else if (count($subjects) != 3) {
+                    $errors['subjectsError'] = 'Veuillez choisir 3 champs';
                 }
             }
         }
@@ -54,7 +54,8 @@
             setcookie(
                 'subjects',
                 serialize($subjects),
-                0
+                time() + 60
             );
         }
+        return $errors;
     }
