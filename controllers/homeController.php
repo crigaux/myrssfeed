@@ -1,7 +1,30 @@
 <?php
     require_once(__DIR__ . '/../config/config.php');
 
-    $linkValue = unserialize($_COOKIE['subjects']);
+    if(!isset($_COOKIE['subjects'], $_COOKIE['nbPages'], $_COOKIE['subjects'])) {
+        setcookie(
+            'displayMode',
+            $_POST['displayMode'],
+            120
+        );
+        setcookie(
+            'nbPages',
+            $_POST['nbPages'],
+            120
+        );
+        setcookie(
+            'subjects',
+            serialize($_POST['subjects']),
+            120
+        );
+    }
+
+    if(isset($_COOKIE['subjects'])) {
+        $linkValue = unserialize($_COOKIE['subjects']);
+    } else {
+        $linkValue = unserialize($_POST['subjects']);
+    }
+
     $url1 = $links[$linkValue[0]];
     $url2 = $links[$linkValue[1]];
     $url3 = $links[$linkValue[2]];

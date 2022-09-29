@@ -10,6 +10,22 @@
         $errors = testDisplayMode($errors, $displayMode);
         $errors = testNbPages($errors, $nbPages);
         $errors = testSubjects($errors, $subjects);
+
+        if(isset($_COOKIE['displayMode']) && isset($_COOKIE['nbPages']) && isset($_COOKIE['subjects'])){
+            header('Location: /home');
+            exit();
+        } else {
+            $test = true;
+            foreach ($errors as $error) {
+                if($error != '') {
+                    $test = false;
+                }
+            }
+            if($test == true) {
+                header('Location: /home');
+                exit();
+            }
+        }
     }
 
     include(__DIR__.'/../views/templates/header.php');
