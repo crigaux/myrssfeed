@@ -26,9 +26,11 @@
     /* mobile */
     #PNF h1{
         font-size: 40px;
+        font-family: 'UnicaOne';
     }
     #PNF h2{
         font-size: 20px;
+        font-family: 'Vollkorn';
     }   
 
     /* desktop */
@@ -44,7 +46,7 @@
     @media (min-width: 500px ) and (max-width: 900px) {
         #PNF h1{
             font-size: 60px;
-        }
+        } 
         #PNF h2{
             font-size: 25px;
         }
