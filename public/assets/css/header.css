@@ -135,6 +135,9 @@
 @media (max-width: 600px){
     .titleHeader{
         font-size: 40px;
+        width: 100%;
+        justify-self: start;
+        text-align: left;
     }
     .toggle-button {
         display: flex;

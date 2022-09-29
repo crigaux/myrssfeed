@@ -11,6 +11,7 @@
                 <li><a href='#'>Galerie</a></li>
                 <li><a href='#'>Populaires</a></li>
                 <li><a href='#'>les plus vus</a></li>
+                
                 </li>
             </ul>
         </div>
