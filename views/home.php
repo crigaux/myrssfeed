@@ -1,4 +1,4 @@
-<h1>Accueil</h1>
+<h1 class="homeTitle">Accueil</h1>
 <main id="mainPage">
 <div class="container">
     <div>
