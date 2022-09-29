@@ -12,7 +12,7 @@
         $errors = testSubjects($errors, $subjects);
 
         if(isset($_COOKIE['displayMode']) && isset($_COOKIE['nbPages']) && isset($_COOKIE['subjects'])){
-            header('Location: /home');
+            header('Location: /accueil');
             exit();
         } else {
             $test = true;
@@ -22,7 +22,7 @@
                 }
             }
             if($test == true) {
-                header('Location: /home');
+                header('Location: /accueil');
                 exit();
             }
         }
