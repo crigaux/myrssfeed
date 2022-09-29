@@ -1,6 +1,7 @@
 RewriteEngine On
 
-ErrorDocument 404 http://myrssfeed.localhost/404.php
+ErrorDocument 404 http://myrssfeed.localhost/404
 
+RewriteRule ^404$ controllers/404controller.php
 RewriteRule ^parameters$ controllers/parametersController.php
 RewriteRule ^home$ controllers/homeController.php

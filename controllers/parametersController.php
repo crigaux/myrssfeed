@@ -5,11 +5,6 @@
     $displayMode = (string) filter_input(INPUT_POST, 'displayMode', FILTER_SANITIZE_NUMBER_INT);
     $nbPages = (string) filter_input(INPUT_POST, 'nbPages', FILTER_SANITIZE_NUMBER_INT);
     $subjects = filter_input(INPUT_POST, 'subjects', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY) ?? [];
-    
-    if(isset($_COOKIE['displayMode']) && isset($_COOKIE['nbPages']) && isset($_COOKIE['subjects'])){
-        header('Location: /controllers/homeController.php');
-        exit();
-    }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $errors = testDisplayMode($errors, $displayMode);
@@ -17,7 +12,7 @@
         $errors = testSubjects($errors, $subjects);
 
         if(isset($_COOKIE['displayMode']) && isset($_COOKIE['nbPages']) && isset($_COOKIE['subjects'])){
-            header('Location: /controllers/homeController.php');
+            header('Location: /home');
             exit();
         } else {
             $test = true;
@@ -27,7 +22,7 @@
                 }
             }
             if($test == true) {
-                header('Location: /controllers/homeController.php');
+                header('Location: /home');
                 exit();
             }
         }
