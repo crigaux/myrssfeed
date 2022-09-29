@@ -182,7 +182,7 @@ hr {
     font-size: 0.8rem;
     width: 90%;
     margin: 1rem 0 0.5rem 5%;
-    height: 18%;
+    height: 15%;
 }
 
 .card .title a {
@@ -284,9 +284,10 @@ button {
 
 .cardPage .title {
     width: 90%;
-    height: 65px;
+    height: 53px;
     margin: 0.5rem 0 0 5%;
     font-size: 0.9rem;
+    margin-bottom: 0.8rem;
 }
 
 .cardPage .button {
@@ -314,6 +315,13 @@ button {
 .cardPage a:hover {
     background-color: #E6725A;
     color: white;
+}
+
+.title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 
 @media (min-width: 1200px) {
@@ -345,9 +353,12 @@ button {
     .cardPage .title {
         display: flex;
         justify-content: center;
-        align-items: center;
-        height: 40%;
+        height: 32%;
         font-size: 1.5rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
     }
 
     .cardPage a {
