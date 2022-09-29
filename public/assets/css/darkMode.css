@@ -61,3 +61,11 @@
 .dark .parametersForm h1 {
     color: #333;
 }
+
+.dark .iconSettings svg {
+    fill: #f3f3f3;
+}
+
+.dark .bar {
+    background-color: #f3f3f3;
+}
