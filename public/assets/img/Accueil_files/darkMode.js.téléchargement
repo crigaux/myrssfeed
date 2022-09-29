@@ -1,0 +1,26 @@
+let darkMode = document.querySelector('.darkModeToggle');
+let body = document.querySelector('body')
+let moon = document.querySelector('.moon');
+let sun = document.querySelector('.sun');
+
+if(document.cookie.split('; ').includes('displayMode=1')) {
+    body.classList.add('dark');
+    sun.style='display:none';
+    moon.style='display:block';
+} else {
+    sun.style='display:block';
+    moon.style='display:none';
+}
+
+darkMode.addEventListener('click', () => {
+    if(document.cookie.split('; ').includes('displayMode=1')) {
+        document.cookie = 'displayMode=0';
+        sun.style='display:block';
+        moon.style='display:none';
+    } else {
+        document.cookie = 'displayMode=1';
+        sun.style='display:none';
+        moon.style='display:block';
+    }
+    body.classList.toggle('dark');
+})

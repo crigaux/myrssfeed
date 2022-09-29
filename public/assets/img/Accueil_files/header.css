@@ -12,27 +12,17 @@
 
 /* TITLE HEADER */
 .titleHeader {
-    width: 60%;
+    width: 80%;
     font-family: 'UnicaOne';
     font-size: 64px;
     text-align: center;
 }
 
 /* ICONES HEADER */
-.iconsHeaderLeft {
+.iconsHeader {
     display: flex;
     justify-content: center;
-    width: 20%;
-}
-
-.iconsHeaderRight {
-    display: flex;
-    justify-content: center;
-    width: 20%;
-}
-
-.settingsIcon {
-    cursor: pointer;
+    width: 10%;
 }
 
 /* BARRE DE SÉPARATION */
@@ -169,27 +159,12 @@ footer .legal a {
 
 .separate {
     height: 20px;
-    width:60%;
+    width: 80%;
     border-bottom: 2px solid #dedede;
 }
 
 .iconsNavbar {
     display: none;
-}
-
-.mobileNavIcons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav .darkModeToggle {
-    display: none;
-}
-
-.headerIcon {
-    width: 30px;
-    height: 30px;
 }
 
 @media (max-width: 600px){
@@ -204,9 +179,6 @@ nav .darkModeToggle {
     }
     .toggle-button {
         display: flex;
-    }
-    nav .darkModeToggle {
-        display: block;
     }
     .navbar-links {
         display: none;
@@ -258,15 +230,10 @@ nav .darkModeToggle {
     .separateLine {
         display: none;
     }
-    .iconsHeaderRight,
-    .iconsHeaderLeft {
+    .iconsHeader {
         display: none;
     }
     .iconsNavbar {
         display: block;
-    }
-    nav .darkModeToggle {
-        width: 35px;
-        height: 35px;
     }
 }
