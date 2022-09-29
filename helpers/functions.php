@@ -10,7 +10,7 @@
             setcookie(
                 'displayMode',
                 $displayMode,
-                time() + 60
+                time() + 60*60*24*30
             );
         }
         return $errors;
@@ -28,7 +28,7 @@
             setcookie(
                 'nbPages',
                 $nbPages,
-                time() + 60
+                time() + 60*60*24*30
             );
         }
         return $errors;
@@ -54,7 +54,7 @@
             setcookie(
                 'subjects',
                 serialize($subjects),
-                time() + 60
+                time() + 60*60*24*30
             );
         }
         return $errors;

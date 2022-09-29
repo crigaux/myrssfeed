@@ -1,3 +1,4 @@
+<main id="mainPage">
 <div class="pageContainer">
     <h1><?=$pageTitle?></h1>
     <hr>

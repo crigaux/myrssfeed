@@ -1,3 +1,5 @@
+<h1>Accueil</h1>
+<main id="mainPage">
 <div class="container">
     <div>
         <h2><?= $title[$linkValue[0]] ?></h2>

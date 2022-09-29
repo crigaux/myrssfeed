@@ -1,3 +1,4 @@
+<main id="mainPage">
 <div class="formContainer">
     <form action="" method="POST" class="parametersForm">
         <h1>Paramètres</h1>

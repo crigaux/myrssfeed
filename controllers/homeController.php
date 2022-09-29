@@ -37,6 +37,8 @@
     $category2 = new SimpleXMLElement($content2);
     $category3 = new SimpleXMLElement($content3);
 
+    $tabTitle = 'Accueil';
+    
     include(__DIR__.'/../views/templates/header.php');
     include(__DIR__.'/../views/templates/navbar.php');
     include(__DIR__.'/../views/home.php');

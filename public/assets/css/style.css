@@ -37,7 +37,7 @@ h1 {
 }
 
 .formContainer {
-    height: 100vh;
+    height: 78vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,9 +133,25 @@ h1 {
     color: red;
 }
 
+@media (min-width: 1144px) {
+    .formContainer {
+        height: 79vh;
+    }
+}
+
 /* ############################################### */
 /* ############### PAGE D'ACCUEIL ################ */
 /* ############################################### */
+
+h1 {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.container h2 {
+    margin-top: 2rem;
+}
 
 h2 {
     margin: 1rem 0 0.5rem 0;
@@ -217,7 +233,7 @@ hr {
 button {
     cursor: pointer;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1144px) {
     .container {
         display: flex;
         width: 80%;
@@ -324,7 +340,7 @@ button {
     overflow: hidden;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1144px) {
     .pageContainer h1 {
         font-size: 3rem;
     }
