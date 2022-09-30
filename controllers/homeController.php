@@ -1,6 +1,11 @@
 <?php
     require_once(__DIR__ . '/../config/config.php');
 
+    if(!isset($_COOKIE['subjects'], $_COOKIE['nbPages'], $_COOKIE['subjects']) 
+        && !isset($_POST['subjects'], $_POST['nbPages'], $_POST['subjects'])) {
+        header('Location: /parameters');
+    }
+    
     if(!isset($_COOKIE['subjects'], $_COOKIE['nbPages'], $_COOKIE['subjects'])) {
         setcookie(
             'displayMode',

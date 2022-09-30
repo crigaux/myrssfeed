@@ -12,7 +12,7 @@
             ?>
                     <div class="card">
                         <div class="img"><?= "<img src=\"$image\">" ?></div>
-                        <h3 class="title"><a href=""><?= $item->title ?></a></h3>
+                        <h3 class="title"><a href="<?=$item->link?>" target="_blank"><?= $item->title ?></a></h3>
                         <div class="description"><?= $item->description ?></div>
                         <div class="date"><?=date('d/m/Y', strtotime(substr($item->pubDate, 5, 11)))?></div>
                     </div>
@@ -32,7 +32,7 @@
             ?>
                     <div class="card">
                         <div class="img"><?= "<img src=\"$image\">" ?></div>
-                        <h3 class="title"><a href=""><?= $item->title ?></a></h3>
+                        <h3 class="title"><a href="<?=$item->link?>" target="_blank"><?= $item->title ?></a></h3>
                         <div class="description"><?= $item->description ?></div>
                         <div class="date"><?=date('d/m/Y', strtotime(substr($item->pubDate, 5, 11)))?></div>
                     </div>
@@ -52,7 +52,7 @@
             ?>
                     <div class="card">
                         <div class="img"><?= "<img src=\"$image\">" ?></div>
-                        <h3 class="title"><a href=""><?= $item->title ?></a></h3>
+                        <h3 class="title"><a href="<?=$item->link?>" target="_blank"><?= $item->title ?></a></h3>
                         <div class="description"><?= $item->description ?></div>
                         <div class="date"><?=date('d/m/Y', strtotime(substr($item->pubDate, 5, 11)))?></div>
                     </div>
